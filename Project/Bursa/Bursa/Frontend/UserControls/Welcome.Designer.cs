@@ -28,35 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.WelcomeLabel = new System.Windows.Forms.Label();
+            this.WelcomeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // WelcomeLabel
+            // WelcomeButton
             // 
-            this.WelcomeLabel.AutoSize = true;
-            this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeLabel.Location = new System.Drawing.Point(13, 22);
-            this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(157, 50);
-            this.WelcomeLabel.TabIndex = 0;
-            this.WelcomeLabel.Text = "Welcome!\r\nClick for Profile";
-            this.WelcomeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.WelcomeLabel.Click += new System.EventHandler(this.label1_Click);
+            this.WelcomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeButton.Location = new System.Drawing.Point(12, 17);
+            this.WelcomeButton.Name = "WelcomeButton";
+            this.WelcomeButton.Size = new System.Drawing.Size(156, 107);
+            this.WelcomeButton.TabIndex = 0;
+            this.WelcomeButton.Text = "Welcome!\r\nClick for Profile";
+            this.WelcomeButton.UseVisualStyleBackColor = true;
+            this.WelcomeButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.WelcomeLabel);
+            this.Controls.Add(this.WelcomeButton);
             this.Name = "Welcome";
-            this.Size = new System.Drawing.Size(184, 89);
+            this.Size = new System.Drawing.Size(184, 141);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label WelcomeLabel;
+        private System.Windows.Forms.Button WelcomeButton;
     }
 }

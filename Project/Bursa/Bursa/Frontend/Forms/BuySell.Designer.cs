@@ -409,7 +409,7 @@
             this.back_to_main_button.TabIndex = 38;
             this.back_to_main_button.Text = "Back to Main";
             this.back_to_main_button.UseVisualStyleBackColor = true;
-            this.back_to_main_button.Click += new System.EventHandler(this.back_to_main_button_Click);
+            this.back_to_main_button.Click += new System.EventHandler(this.Back_to_main_button_Click);
             // 
             // BuySell
             // 

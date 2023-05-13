@@ -18,12 +18,12 @@ namespace Bursa.Frontend.UserControls
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+     
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             UserProfile newprof = new UserProfile();
             newprof.Show();
-
         }
     }
 }

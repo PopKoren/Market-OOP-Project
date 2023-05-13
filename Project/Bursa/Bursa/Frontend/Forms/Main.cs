@@ -14,19 +14,26 @@ namespace Bursa
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm(bool logged = false)
         {
             InitializeComponent();
 
-            RegisterOrLogin welco = new RegisterOrLogin();
-            welco.Visible = true;
+            if (logged)
+            {
+                _ = new Welcome
+                {
+                    Visible = true
+                };
+            }
+            else
+            {
+                _ = new RegisterOrLogin
+                {
+                    Visible = true
+                };
+            }
         }
 
-        private void Register_Login_Button_Click(object sender, EventArgs e)
-        {
-            RegisterLogin registerLoginForm = new RegisterLogin();
-            registerLoginForm.Show();
-            this.Hide();
-        }
+   
     }
 }

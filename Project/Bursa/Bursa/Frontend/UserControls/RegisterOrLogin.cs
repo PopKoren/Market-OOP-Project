@@ -18,12 +18,11 @@ namespace Bursa.Frontend.UserControls
             InitializeComponent();
         }
 
-
-        private void WelcomeLabel_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            RegisterLogin registerLoginForm = new RegisterLogin();
-            registerLoginForm.Show();
             this.Hide();
+            RegisterLogin registerLoginForm = new RegisterLogin();
+            registerLoginForm.ShowDialog();
         }
     }
 }

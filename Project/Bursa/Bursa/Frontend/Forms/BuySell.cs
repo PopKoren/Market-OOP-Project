@@ -17,7 +17,7 @@ namespace Bursa.Frontend.Forms
             InitializeComponent();
         }
 
-        private void back_to_main_button_Click(object sender, EventArgs e)
+        private void Back_to_main_button_Click(object sender, EventArgs e)
         {
             this.Close();
             MainForm main = new MainForm();

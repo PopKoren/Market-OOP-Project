@@ -38,10 +38,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.Register_Login_Button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.welcome1 = new Bursa.Frontend.UserControls.Welcome();
             this.registerOrLogin1 = new Bursa.Frontend.UserControls.RegisterOrLogin();
+            this.welcome1 = new Bursa.Frontend.UserControls.Welcome();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,17 +134,6 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "HIT";
             // 
-            // Register_Login_Button
-            // 
-            this.Register_Login_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Register_Login_Button.Location = new System.Drawing.Point(606, 325);
-            this.Register_Login_Button.Name = "Register_Login_Button";
-            this.Register_Login_Button.Size = new System.Drawing.Size(182, 113);
-            this.Register_Login_Button.TabIndex = 10;
-            this.Register_Login_Button.Text = "Register / Login";
-            this.Register_Login_Button.UseVisualStyleBackColor = true;
-            this.Register_Login_Button.Click += new System.EventHandler(this.Register_Login_Button_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Bursa.Properties.Resources.Untitled;
@@ -155,19 +143,19 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // welcome1
-            // 
-            this.welcome1.Location = new System.Drawing.Point(606, 20);
-            this.welcome1.Name = "welcome1";
-            this.welcome1.Size = new System.Drawing.Size(184, 113);
-            this.welcome1.TabIndex = 11;
-            // 
             // registerOrLogin1
             // 
-            this.registerOrLogin1.Location = new System.Drawing.Point(621, 25);
+            this.registerOrLogin1.Location = new System.Drawing.Point(604, 15);
             this.registerOrLogin1.Name = "registerOrLogin1";
-            this.registerOrLogin1.Size = new System.Drawing.Size(169, 127);
-            this.registerOrLogin1.TabIndex = 12;
+            this.registerOrLogin1.Size = new System.Drawing.Size(178, 144);
+            this.registerOrLogin1.TabIndex = 14;
+            // 
+            // welcome1
+            // 
+            this.welcome1.Location = new System.Drawing.Point(604, 15);
+            this.welcome1.Name = "welcome1";
+            this.welcome1.Size = new System.Drawing.Size(184, 141);
+            this.welcome1.TabIndex = 13;
             // 
             // MainForm
             // 
@@ -176,7 +164,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.registerOrLogin1);
             this.Controls.Add(this.welcome1);
-            this.Controls.Add(this.Register_Login_Button);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -209,7 +196,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Frontend.UserControls.Welcome welcome1;
-        private System.Windows.Forms.Button Register_Login_Button;
         private Frontend.UserControls.RegisterOrLogin registerOrLogin1;
     }
 }

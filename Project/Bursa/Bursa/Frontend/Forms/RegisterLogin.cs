@@ -1,5 +1,6 @@
 ﻿using Bursa.Frontend.UserControls;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Bursa.Frontend.Forms
@@ -13,11 +14,10 @@ namespace Bursa.Frontend.Forms
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            
             this.Close();
-            MainForm mainf = new MainForm();
+            MainForm mainf = new MainForm(true);
             mainf.Show();
-            Welcome welco = new Welcome();
-            welco.Visible = true;
         }
 
      

@@ -12,28 +12,26 @@ using Bursa.Frontend.UserControls;
 using System.Net.Http;
 
 
+
 namespace Bursa
 {
+   
+
     public partial class MainForm : Form
     {
+
+        static public Welcome welc = new Welcome();
+        static public RegisterOrLogin reglog = new RegisterOrLogin();
+
         public MainForm(bool logged = false)
         {
             InitializeComponent();
 
-            if (logged)
-            {
-                _ = new Welcome
-                {
-                    Visible = true
-                };
-            }
-            else
-            {
-                _ = new RegisterOrLogin
-                {
-                    Visible = true
-                };
-            }
+            panel1.Controls.Add(welc);
+            panel1.Controls.Add(reglog);
+            welc.Visible = false;
+
+            //ShowRegisterOrLogin();
 
             BTCPrice.Hide();
             ETHPrice.Hide();
@@ -41,45 +39,109 @@ namespace Bursa
 
         }
 
+        //public void ShowWelcome()
+        //{
+        //    welcome2.Visible = true;
+        //    registerOrLogin2.Visible = false;
+
+        //}
+
+        //public void ShowRegisterOrLogin()
+        //{
+        //    welcome2.Visible = false;
+        //    registerOrLogin2.Visible = true;
+        //}
+
+       
         private void Label4_Click(object sender, EventArgs e)
         {
-            BuySell buysell = new BuySell();
-            buysell.Show();
+            if (CheckIfLogged())
+            {
+                BuySell buysell = new BuySell();
+                buysell.Show();
+            }
         }
 
         private void Label8_Click(object sender, EventArgs e)
         {
-            BuySell buysell = new BuySell();
-            buysell.Show();
+            if (CheckIfLogged())
+            {
+                BuySell buysell = new BuySell();
+                buysell.Show();
+            }
         }
 
         private void Label7_Click(object sender, EventArgs e)
         {
-            BuySell buysell = new BuySell();
-            buysell.Show();
+            if (CheckIfLogged())
+            {
+                BuySell buysell = new BuySell();
+                buysell.Show();
+            }
+
         }
 
         private void Label6_Click(object sender, EventArgs e)
         {
-            BuySell buysell = new BuySell();
-            buysell.Show();
+            if (CheckIfLogged())
+            {
+                BuySell buysell = new BuySell();
+                buysell.Show();
+            }
         }
 
         private void Label5_Click(object sender, EventArgs e)
         {
-            BuySell buysell = new BuySell();
-            buysell.Show();
+            if (CheckIfLogged())
+            {
+                BuySell buysell = new BuySell();
+                buysell.Show();
+            }
         }
 
         private void Label9_Click(object sender, EventArgs e)
         {
-            BuySell buysell = new BuySell();
-            buysell.Show();
+            if (CheckIfLogged())
+            {
+                BuySell buysell = new BuySell();
+                buysell.Show();
+            }
+           
         }
 
-       
+       public bool CheckIfLogged()
+        {
+
+            bool isUserControlVisible = false;
+
+            foreach (Control control in panel1.Controls)
+            {
+                if (control == welc && control.Visible)
+                {
+                    // userControl1 is visible
+                    isUserControlVisible = true;
+                    break;
+                }
+            }
+
+            if (isUserControlVisible)
+            {
+                return true;
+            }
+            else 
+            {
+                MessageBox.Show("Can not access while not logged in.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+           
+        }
+
         private async void MainForm_Load(object sender, EventArgs e)
         {
+            // ------------------------------------------ //
+            // BTC PRICE //
+
             HttpClient client = new HttpClient();
 
             string responseContent = await client.GetStringAsync("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD");
@@ -89,7 +151,8 @@ namespace Bursa
             BTCPrice.Text = responseContent;
             BTCPrice.Show();
 
-           // ------------------------------------------ //
+            // ------------------------------------------ //
+            // ETH PRICE //
 
             HttpClient client2 = new HttpClient();
 
@@ -100,7 +163,10 @@ namespace Bursa
             ETHPrice.Text = responseContent2;
             ETHPrice.Show();
             HITPrice.Show();
+            // ------------------------------------------ //
 
         }
+
+
     }
 }

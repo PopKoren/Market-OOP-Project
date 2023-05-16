@@ -36,6 +36,7 @@
             // 
             this.UserProfileView.AllowUserToAddRows = false;
             this.UserProfileView.AllowUserToDeleteRows = false;
+            this.UserProfileView.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UserProfileView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UserProfileView.Location = new System.Drawing.Point(317, 30);
             this.UserProfileView.Name = "UserProfileView";

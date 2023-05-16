@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +42,16 @@
             this.BTCPrice = new System.Windows.Forms.Label();
             this.ETHPrice = new System.Windows.Forms.Label();
             this.HITPrice = new System.Windows.Forms.Label();
-            this.registerOrLogin1 = new Bursa.Frontend.UserControls.RegisterOrLogin();
-            this.welcome1 = new Bursa.Frontend.UserControls.Welcome();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.registerOrLogin2 = new Bursa.Frontend.UserControls.RegisterOrLogin();
+            this.welcome2 = new Bursa.Frontend.UserControls.Welcome();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 144);
@@ -60,6 +62,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(112, 205);
@@ -70,6 +73,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(467, 205);
@@ -80,6 +84,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(113, 269);
@@ -91,6 +96,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(113, 306);
@@ -102,6 +108,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(113, 343);
@@ -113,6 +120,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(469, 275);
@@ -124,6 +132,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(468, 306);
@@ -135,6 +144,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(468, 343);
@@ -146,6 +156,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(42, 25);
@@ -156,6 +167,7 @@
             // 
             // BTCPrice
             // 
+            this.BTCPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BTCPrice.AutoSize = true;
             this.BTCPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTCPrice.Location = new System.Drawing.Point(532, 272);
@@ -166,6 +178,7 @@
             // 
             // ETHPrice
             // 
+            this.ETHPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ETHPrice.AutoSize = true;
             this.ETHPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ETHPrice.Location = new System.Drawing.Point(547, 302);
@@ -176,38 +189,51 @@
             // 
             // HITPrice
             // 
+            this.HITPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HITPrice.AutoSize = true;
             this.HITPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HITPrice.Location = new System.Drawing.Point(509, 339);
             this.HITPrice.Name = "HITPrice";
-            this.HITPrice.Size = new System.Drawing.Size(55, 24);
+            this.HITPrice.Size = new System.Drawing.Size(45, 24);
             this.HITPrice.TabIndex = 17;
-            this.HITPrice.Text = "1.000";
+            this.HITPrice.Text = "1.00";
             // 
-            // registerOrLogin1
+            // panel1
             // 
-            this.registerOrLogin1.Location = new System.Drawing.Point(604, 15);
-            this.registerOrLogin1.Name = "registerOrLogin1";
-            this.registerOrLogin1.Size = new System.Drawing.Size(178, 144);
-            this.registerOrLogin1.TabIndex = 14;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.registerOrLogin2);
+            this.panel1.Controls.Add(this.welcome2);
+            this.panel1.Location = new System.Drawing.Point(588, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 143);
+            this.panel1.TabIndex = 18;
             // 
-            // welcome1
+            // registerOrLogin2
             // 
-            this.welcome1.Location = new System.Drawing.Point(604, 15);
-            this.welcome1.Name = "welcome1";
-            this.welcome1.Size = new System.Drawing.Size(184, 141);
-            this.welcome1.TabIndex = 13;
+            this.registerOrLogin2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.registerOrLogin2.Location = new System.Drawing.Point(0, 0);
+            this.registerOrLogin2.Name = "registerOrLogin2";
+            this.registerOrLogin2.Size = new System.Drawing.Size(200, 143);
+            this.registerOrLogin2.TabIndex = 0;
+            // 
+            // welcome2
+            // 
+            this.welcome2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.welcome2.Location = new System.Drawing.Point(0, 0);
+            this.welcome2.Name = "welcome2";
+            this.welcome2.Size = new System.Drawing.Size(200, 143);
+            this.welcome2.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.HITPrice);
             this.Controls.Add(this.ETHPrice);
             this.Controls.Add(this.BTCPrice);
-            this.Controls.Add(this.registerOrLogin1);
-            this.Controls.Add(this.welcome1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -218,18 +244,19 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -240,11 +267,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Frontend.UserControls.Welcome welcome1;
-        private Frontend.UserControls.RegisterOrLogin registerOrLogin1;
         private System.Windows.Forms.Label BTCPrice;
         private System.Windows.Forms.Label ETHPrice;
         private System.Windows.Forms.Label HITPrice;
+        private System.Windows.Forms.Panel panel1;
+        private Frontend.UserControls.Welcome welcome2;
+        private Frontend.UserControls.RegisterOrLogin registerOrLogin2;
     }
 }
 

@@ -16,13 +16,14 @@ namespace Bursa.Frontend.UserControls
         public RegisterOrLogin()
         {
             InitializeComponent();
+            //Visible = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             RegisterLogin registerLoginForm = new RegisterLogin();
             registerLoginForm.ShowDialog();
+
         }
     }
 }

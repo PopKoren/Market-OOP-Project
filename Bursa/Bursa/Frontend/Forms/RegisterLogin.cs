@@ -7,39 +7,70 @@ using System.Windows.Forms;
 
 namespace Bursa.Frontend.Forms
 {
+
     public partial class RegisterLogin : Form
     {
+ 
         public RegisterLogin()
         {
             InitializeComponent();
+                   
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+            private void LoginButton_Click(object sender, EventArgs e)
         {
-            
+            MainForm.welc.Visible = true;
+            MainForm.welc.BringToFront();
+            MainForm.reglog.Visible = false;
+
             this.Close();
-            //MainForm mainf = new MainForm(true);
-            //mainf.Show();
+           
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             
-            if (IsValidForm())
+            if (IsValidForm() && IsValidBirthDate())
             {
                 string Username = usernamebox_reg.Text;
                 string Password = passwordbox_reg.Text;
                 DateTime dateofbirth = dateTimePicker.Value;
                 string email = emailbox.Text;
 
+
                 User newuser = new User(Username, Password, dateofbirth, email);
                 UserManager.AddUser(newuser);
+
+                MainForm.welc.Visible = true;
+                MainForm.welc.BringToFront();
+                MainForm.reglog.Visible = false;
+
+
                 this.Close();
             }
 
-            //MessageBox.Show("Wrong input!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
         private bool IsValidForm()
+        {
+    
+            if (string.IsNullOrEmpty(usernamebox_reg.Text) || string.IsNullOrEmpty(passwordbox_reg.Text) ||
+                string.IsNullOrEmpty(emailbox.Text)) {
+          
+                MessageBox.Show("Please fill in all the fields.", "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!(emailbox.Text.Contains("@")) || !(emailbox.Text.Contains(".")))
+            {
+                MessageBox.Show("Please correct your email adress.", "Incomplete email adress.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+                
+            }
+            
+            return true;
+        }
+
+        private bool IsValidBirthDate()
         {
             DateTime dateOfBirth = dateTimePicker.Value;
 
@@ -58,5 +89,8 @@ namespace Bursa.Frontend.Forms
 
             
         }
+
+      
+      
     }
 }

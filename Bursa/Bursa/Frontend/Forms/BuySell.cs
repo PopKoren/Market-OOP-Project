@@ -19,9 +19,8 @@ namespace Bursa.Frontend.Forms
 
         private void Back_to_main_button_Click(object sender, EventArgs e)
         {
+           
             this.Close();
-            MainForm main = new MainForm();
-            main.Show();
             
         }
     }

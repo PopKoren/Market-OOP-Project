@@ -39,3 +39,16 @@ C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Project\Bursa\Bursa\obj
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Project\Bursa\Bursa\obj\Debug\Bursa.pdb
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Project\Bursa\Bursa\obj\Debug\Bursa.exe.config
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Project\Bursa\Bursa\obj\Debug\Bursa.csprojAssemblyReference.cache
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.csprojAssemblyReference.cache
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.BuySell.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.MainForm.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.RegisterLogin.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.UserProfile.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.UserControls.RegisterOrLogin.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.UserControls.Welcome.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Properties.Resources.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.csproj.GenerateResource.cache
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.csproj.CoreCompileInputs.cache
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.exe.config
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.exe
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.pdb

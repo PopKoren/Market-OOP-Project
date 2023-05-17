@@ -5,12 +5,17 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Bursa.Backend
 {
-    public class UserManager
+    public abstract class UserManager
     {
-        private static BindingList<User> users = new BindingList<User>();
+        public static BindingList<User> users;
+        static UserManager()
+        {
+            users = FileUtils.LoadUsersFromFile();
+        }
 
         public static BindingList<User> GetUsers()
         {
@@ -22,6 +27,10 @@ namespace Bursa.Backend
             users.Add(newuser);
         }
 
+        public static void SaveUsers(object sender, FormClosingEventArgs e)
+        {
+            FileUtils.SaveUsersToFile(users);
+        }
 
 
 

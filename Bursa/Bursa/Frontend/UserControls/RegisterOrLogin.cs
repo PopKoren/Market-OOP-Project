@@ -16,7 +16,6 @@ namespace Bursa.Frontend.UserControls
         public RegisterOrLogin()
         {
             InitializeComponent();
-            //Visible = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)

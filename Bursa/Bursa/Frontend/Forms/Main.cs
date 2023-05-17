@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using Bursa.Frontend.Forms;
 using Bursa.Frontend.UserControls;
 using System.Net.Http;
-
-
+using Bursa.Backend;
 
 namespace Bursa
 {
@@ -23,7 +22,7 @@ namespace Bursa
         static public Welcome welc = new Welcome();
         static public RegisterOrLogin reglog = new RegisterOrLogin();
 
-        public MainForm(bool logged = false)
+        public MainForm()
         {
             InitializeComponent();
 
@@ -34,9 +33,10 @@ namespace Bursa
             //ShowRegisterOrLogin();
 
             BTCPrice.Hide();
-            ETHPrice.Hide();
+            ETHPrice.Hide(); 
             HITPrice.Hide();
 
+            this.FormClosing += new FormClosingEventHandler(UserManager.SaveUsers);
         }
 
         //public void ShowWelcome()
@@ -58,7 +58,7 @@ namespace Bursa
             if (CheckIfLogged())
             {
                 BuySell buysell = new BuySell();
-                buysell.Show();
+                buysell.ShowDialog();
             }
         }
 
@@ -67,7 +67,7 @@ namespace Bursa
             if (CheckIfLogged())
             {
                 BuySell buysell = new BuySell();
-                buysell.Show();
+                buysell.ShowDialog();
             }
         }
 
@@ -76,7 +76,7 @@ namespace Bursa
             if (CheckIfLogged())
             {
                 BuySell buysell = new BuySell();
-                buysell.Show();
+                buysell.ShowDialog();
             }
 
         }
@@ -86,7 +86,7 @@ namespace Bursa
             if (CheckIfLogged())
             {
                 BuySell buysell = new BuySell();
-                buysell.Show();
+                buysell.ShowDialog();
             }
         }
 
@@ -95,7 +95,7 @@ namespace Bursa
             if (CheckIfLogged())
             {
                 BuySell buysell = new BuySell();
-                buysell.Show();
+                buysell.ShowDialog();
             }
         }
 
@@ -104,27 +104,27 @@ namespace Bursa
             if (CheckIfLogged())
             {
                 BuySell buysell = new BuySell();
-                buysell.Show();
+                buysell.ShowDialog();
             }
-           
+
         }
 
        public bool CheckIfLogged()
         {
 
-            bool isUserControlVisible = false;
+            //bool isUserControlVisible = false;
 
-            foreach (Control control in panel1.Controls)
-            {
-                if (control == welc && control.Visible)
-                {
-                    // userControl1 is visible
-                    isUserControlVisible = true;
-                    break;
-                }
-            }
+            //foreach (Control control in panel1.Controls)
+            //{
+            //    if (control == welc && control.Visible)
+            //    {
+            //        // userControl1 is visible
+            //        isUserControlVisible = true;
+            //        break;
+            //    }
+            //}
 
-            if (isUserControlVisible)
+            if (welc.Visible == true)
             {
                 return true;
             }
@@ -144,7 +144,9 @@ namespace Bursa
 
             HttpClient client = new HttpClient();
 
+
             string responseContent = await client.GetStringAsync("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD");
+
             responseContent = responseContent.Replace("}", " ");
             responseContent = responseContent.Remove(0, 7);
 
@@ -162,9 +164,11 @@ namespace Bursa
 
             ETHPrice.Text = responseContent2;
             ETHPrice.Show();
-            HITPrice.Show();
             // ------------------------------------------ //
 
+            HITPrice.Show();
+
+           
         }
 
 

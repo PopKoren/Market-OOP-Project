@@ -16,15 +16,13 @@ namespace Bursa.Frontend.UserControls
         public Welcome()
         {
             InitializeComponent();
-            //Visible = false;
-
         }
 
 
         private void Button1_Click(object sender, EventArgs e)
         {
             UserProfile newprof = new UserProfile();
-            newprof.Show();
+            newprof.ShowDialog();
         }
     }
 }

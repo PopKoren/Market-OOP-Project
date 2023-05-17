@@ -1,4 +1,5 @@
 ﻿using Bursa.Backend;
+using Bursa.Backend.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,5 +21,18 @@ namespace Bursa.Frontend.Forms
             UserProfileView.DataSource = UserManager.GetUsers();
 
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            
+            MainForm.reglog.Visible = true;
+            MainForm.reglog.BringToFront();
+            MainForm.welc.Visible = false;
+
+            this.Close();
+
+        }
+
+     
     }
 }

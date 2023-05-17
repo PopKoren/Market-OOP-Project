@@ -2,29 +2,67 @@
 using Bursa.Backend.Models;
 using Bursa.Frontend.UserControls;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Bursa.Frontend.Forms
 {
 
     public partial class RegisterLogin : Form
     {
- 
+        //public BindingList<User> users = UserManager.GetUsers();
         public RegisterLogin()
         {
             InitializeComponent();
                    
         }
 
-            private void LoginButton_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            MainForm.welc.Visible = true;
-            MainForm.welc.BringToFront();
-            MainForm.reglog.Visible = false;
+            if (IsLoginValid())
+            {
+                MainForm.welc.Visible = true;
+                MainForm.welc.BringToFront();
+                MainForm.reglog.Visible = false;
 
-            this.Close();
-           
+                this.Close();
+            }
+         
+
+        }
+        private bool IsLoginValid()
+        {
+            //bool isUserValid = false;
+
+            if (string.IsNullOrEmpty(username_label_log.Text) || string.IsNullOrEmpty(password_text_log.Text))
+            {
+
+                MessageBox.Show("Please fill in all the fields.", "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+
+                string usernameInput = username_label_log.Text;
+                string passwordInput = password_text_log.Text;
+
+                User user = UserManager.users.FirstOrDefault(u => u.Username == usernameInput && u.Password == passwordInput);
+
+                //isUserValid = UserManager.GetUsers().Any(user => user.Username == usernameInput && user.Password == passwordInput);
+
+                if (user != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username / Password.", "Wrong Information.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)

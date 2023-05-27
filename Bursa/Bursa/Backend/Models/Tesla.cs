@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bursa.Backend.Models
 {
+    [Serializable]
+
     public class Tesla : Stock
     {
-        public Tesla(int quantity, int price)
-           : base("Tesla", quantity, price)
+        public Tesla(int quantity)
+           : base("Tesla", quantity, 200)
         {
 
         }

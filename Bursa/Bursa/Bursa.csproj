@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\FileUtils\FileUtils.cs" />
+    <Compile Include="Backend\Models\Apple.cs" />
     <Compile Include="Backend\Models\Bitcoin.cs" />
     <Compile Include="Backend\Models\HIT.cs" />
     <Compile Include="Backend\Models\Pfizer.cs" />
@@ -56,16 +57,8 @@
     <Compile Include="Backend\Models\Crypto.cs" />
     <Compile Include="Backend\Models\Etherium.cs" />
     <Compile Include="Backend\Models\Item.cs" />
-    <Compile Include="Backend\Models\Medical.cs" />
     <Compile Include="Backend\Models\Stock.cs" />
-    <Compile Include="Backend\Models\Tech.cs" />
     <Compile Include="Backend\UserManager.cs" />
-    <Compile Include="Frontend\Forms\BuySell.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frontend\Forms\BuySell.Designer.cs">
-      <DependentUpon>BuySell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frontend\Forms\BuyAndSell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +123,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frontend\Forms\BuyAndSell.resx">
       <DependentUpon>BuyAndSell.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\BuySell.resx">
-      <DependentUpon>BuySell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

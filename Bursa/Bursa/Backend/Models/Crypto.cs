@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bursa.Backend.Models
 {
+    [Serializable]
+
     public abstract class Crypto : Item
     {
         public bool IsMinable { get; set; }

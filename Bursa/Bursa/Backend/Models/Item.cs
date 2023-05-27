@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bursa.Backend.Models
 {
-   public abstract class Item
+    [Serializable]
+
+    public abstract class Item
     {
         public string Name { get; set; }
         public int Quantity { get; set; }

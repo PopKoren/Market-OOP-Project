@@ -8,11 +8,10 @@ namespace Bursa.Backend.Models
 {
     [Serializable]
 
-    public class Bitcoin : Crypto
+    public class Apple : Stock
     {
-       
-        public Bitcoin(int quanity)
-             : base("Bitcoin", quanity, MainForm.btcprice, true, false)
+        public Apple(int quantity)
+          : base("Apple", quantity, 175)
         {
 
         }

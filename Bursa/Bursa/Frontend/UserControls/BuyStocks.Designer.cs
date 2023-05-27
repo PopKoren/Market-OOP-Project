@@ -29,110 +29,162 @@ namespace Bursa.Frontend.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.BuyPfizer = new System.Windows.Forms.Button();
+            this.BuyApple = new System.Windows.Forms.Button();
+            this.BuyTesla = new System.Windows.Forms.Button();
+            this.PfizerAm = new System.Windows.Forms.TextBox();
+            this.AppleAm = new System.Windows.Forms.TextBox();
+            this.TeslaAm = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PfizerPR = new System.Windows.Forms.Label();
+            this.ApplePR = new System.Windows.Forms.Label();
+            this.TeslaPR = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button6
+            // BuyPfizer
             // 
-            this.button6.Location = new System.Drawing.Point(373, 178);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "Buy";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BuyPfizer.Location = new System.Drawing.Point(381, 209);
+            this.BuyPfizer.Name = "BuyPfizer";
+            this.BuyPfizer.Size = new System.Drawing.Size(75, 23);
+            this.BuyPfizer.TabIndex = 27;
+            this.BuyPfizer.Text = "Buy";
+            this.BuyPfizer.UseVisualStyleBackColor = true;
+            this.BuyPfizer.Click += new System.EventHandler(this.BuyPfizer_Click);
             // 
-            // button5
+            // BuyApple
             // 
-            this.button5.Location = new System.Drawing.Point(373, 138);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "Buy";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BuyApple.Location = new System.Drawing.Point(381, 169);
+            this.BuyApple.Name = "BuyApple";
+            this.BuyApple.Size = new System.Drawing.Size(75, 23);
+            this.BuyApple.TabIndex = 26;
+            this.BuyApple.Text = "Buy";
+            this.BuyApple.UseVisualStyleBackColor = true;
+            this.BuyApple.Click += new System.EventHandler(this.BuyApple_Click);
             // 
-            // button4
+            // BuyTesla
             // 
-            this.button4.Location = new System.Drawing.Point(373, 94);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Buy";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BuyTesla.Location = new System.Drawing.Point(381, 125);
+            this.BuyTesla.Name = "BuyTesla";
+            this.BuyTesla.Size = new System.Drawing.Size(75, 23);
+            this.BuyTesla.TabIndex = 25;
+            this.BuyTesla.Text = "Buy";
+            this.BuyTesla.UseVisualStyleBackColor = true;
+            this.BuyTesla.Click += new System.EventHandler(this.BuyTesla_Click);
             // 
-            // textBox6
+            // PfizerAm
             // 
-            this.textBox6.Location = new System.Drawing.Point(230, 181);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 24;
+            this.PfizerAm.Location = new System.Drawing.Point(275, 211);
+            this.PfizerAm.Name = "PfizerAm";
+            this.PfizerAm.Size = new System.Drawing.Size(100, 20);
+            this.PfizerAm.TabIndex = 24;
             // 
-            // textBox5
+            // AppleAm
             // 
-            this.textBox5.Location = new System.Drawing.Point(230, 139);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 23;
+            this.AppleAm.Location = new System.Drawing.Point(275, 169);
+            this.AppleAm.Name = "AppleAm";
+            this.AppleAm.Size = new System.Drawing.Size(100, 20);
+            this.AppleAm.TabIndex = 23;
             // 
-            // textBox4
+            // TeslaAm
             // 
-            this.textBox4.Location = new System.Drawing.Point(230, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 22;
+            this.TeslaAm.Location = new System.Drawing.Point(275, 126);
+            this.TeslaAm.Name = "TeslaAm";
+            this.TeslaAm.Size = new System.Drawing.Size(100, 20);
+            this.TeslaAm.TabIndex = 22;
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(171, 184);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 20);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Tesla";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(149, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 24);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Buy";
             // 
-            // label6
+            // PfizerPR
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(171, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Pfizer";
+            this.PfizerPR.AutoSize = true;
+            this.PfizerPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PfizerPR.Location = new System.Drawing.Point(204, 215);
+            this.PfizerPR.Name = "PfizerPR";
+            this.PfizerPR.Size = new System.Drawing.Size(51, 20);
+            this.PfizerPR.TabIndex = 34;
+            this.PfizerPR.Text = "label6";
             // 
-            // label5
+            // ApplePR
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(171, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Apple";
+            this.ApplePR.AutoSize = true;
+            this.ApplePR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplePR.Location = new System.Drawing.Point(204, 167);
+            this.ApplePR.Name = "ApplePR";
+            this.ApplePR.Size = new System.Drawing.Size(51, 20);
+            this.ApplePR.TabIndex = 33;
+            this.ApplePR.Text = "label5";
             // 
-            // BuyStock
+            // TeslaPR
+            // 
+            this.TeslaPR.AutoSize = true;
+            this.TeslaPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeslaPR.Location = new System.Drawing.Point(204, 128);
+            this.TeslaPR.Name = "TeslaPR";
+            this.TeslaPR.Size = new System.Drawing.Size(65, 20);
+            this.TeslaPR.TabIndex = 32;
+            this.TeslaPR.Text = "teslaam";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 215);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(174, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Pfizer - Owned amount:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 20);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Apple  - Owned amount:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 40);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Tesla  - Owned amount:\r\n\r\n";
+            // 
+            // BuyStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Name = "BuyStock";
-            this.Size = new System.Drawing.Size(618, 299);
+            this.Controls.Add(this.PfizerPR);
+            this.Controls.Add(this.ApplePR);
+            this.Controls.Add(this.TeslaPR);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BuyPfizer);
+            this.Controls.Add(this.BuyApple);
+            this.Controls.Add(this.BuyTesla);
+            this.Controls.Add(this.PfizerAm);
+            this.Controls.Add(this.AppleAm);
+            this.Controls.Add(this.TeslaAm);
+            this.Name = "BuyStocks";
+            this.Size = new System.Drawing.Size(495, 299);
+            this.Load += new System.EventHandler(this.BuyStocks_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,14 +192,18 @@ namespace Bursa.Frontend.UserControls
 
         #endregion
 
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button BuyPfizer;
+        private System.Windows.Forms.Button BuyApple;
+        private System.Windows.Forms.Button BuyTesla;
+        private System.Windows.Forms.TextBox PfizerAm;
+        private System.Windows.Forms.TextBox AppleAm;
+        private System.Windows.Forms.TextBox TeslaAm;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label PfizerPR;
+        private System.Windows.Forms.Label ApplePR;
+        private System.Windows.Forms.Label TeslaPR;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

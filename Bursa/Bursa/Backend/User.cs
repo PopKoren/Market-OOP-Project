@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace Bursa.Backend.Models
     public class User
     {
 
-        private List<Crypto> CryptoPortfolio { get; set; }
-        private List<Stock> StocksPortfolio { get; set; }
+        public BindingList<Crypto> CryptoPortfolio { get; set; } =  new BindingList<Crypto>();
+        public BindingList<Stock> StocksPortfolio { get; set; } = new BindingList<Stock>();
 
         public string Username { get; set; }
         public string Password { get; set; }
@@ -27,8 +28,37 @@ namespace Bursa.Backend.Models
             Email = email;
             TotalBalance = balance;
 
+
+            Bitcoin btc = new Bitcoin(0);
+            Etherium eth = new Etherium(0);
+            HIT hit = new HIT(0);
+
+            Tesla tesla = new Tesla(0);
+            Apple apple = new Apple(0);
+            Pfizer pfizer = new Pfizer(0);
+
+            // Initialize the data list and add instances
+
+            CryptoPortfolio.Add(btc);
+            CryptoPortfolio.Add(eth);
+            CryptoPortfolio.Add(hit);
+
+            StocksPortfolio.Add(tesla);
+            StocksPortfolio.Add(apple);
+            StocksPortfolio.Add(pfizer);
+
+
+
         }
 
+        public BindingList<Crypto> GetCrypto()
+        {
+            return CryptoPortfolio;
+        }
+        public BindingList<Stock> GetStocks()
+        {
+            return StocksPortfolio;
+        }
 
     }
 }

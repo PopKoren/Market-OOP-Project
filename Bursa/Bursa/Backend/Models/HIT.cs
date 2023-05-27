@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bursa.Backend.Models
 {
+    [Serializable]
+
     public class HIT : Crypto
     {
-        public HIT(int quanity, int price)
-            : base("HIT", quanity, price, false, true)
+        public HIT(int quanity)
+            : base("HIT", quanity, 1, false, true)
         {
 
         }

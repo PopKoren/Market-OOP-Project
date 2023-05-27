@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Bursa.Backend;
+using Bursa.Backend.Models;
+using Bursa.Frontend.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +13,111 @@ using System.Windows.Forms;
 
 namespace Bursa.Frontend.UserControls
 {
+
     public partial class SellCrypto : UserControl
     {
+        User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
+
         public SellCrypto()
         {
             InitializeComponent();
+        }
+
+        private void SellCrypto_Load(object sender, EventArgs e)
+        {
+            UpdatePrices();
+        }
+        public void UpdatePrices()
+        {
+            if (targetUser != null)
+            {
+                int btcamount = targetUser.CryptoPortfolio[0].Quantity;
+                int ethamount = targetUser.CryptoPortfolio[1].Quantity;
+                int hitamount = targetUser.CryptoPortfolio[2].Quantity;
+
+                BTCam.Text = btcamount.ToString();
+                ETHam.Text = ethamount.ToString();
+                HITam.Text = hitamount.ToString();
+
+            }
+        }
+
+        private void Sellbtc_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(BTCbox.Text))
+            {
+                if (targetUser.CryptoPortfolio[0].Quantity >= int.Parse(BTCbox.Text))
+                {
+                    targetUser.CryptoPortfolio[0].Quantity -= int.Parse(BTCbox.Text);
+                    BTCbox.Clear();
+                    UpdatePrices();
+                    MessageBox.Show("Successfully Sold", "Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Not enough owned.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        private void SellETH_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(ETHbox.Text))
+            {
+                if (targetUser.CryptoPortfolio[1].Quantity >= int.Parse(ETHbox.Text))
+                {
+                    targetUser.CryptoPortfolio[1].Quantity -= int.Parse(ETHbox.Text);
+                    ETHbox.Clear();
+                    UpdatePrices();
+                    MessageBox.Show("Successfully Sold", "Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Not enough owned.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        private void SellHIT_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(HITbox.Text))
+            {
+                if (targetUser.CryptoPortfolio[2].Quantity >= int.Parse(HITbox.Text))
+                {
+                    targetUser.CryptoPortfolio[2].Quantity -= int.Parse(HITbox.Text);
+                    HITbox.Clear();
+                    UpdatePrices();
+                    MessageBox.Show("Successfully Sold", "Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Not enough owned.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
     }
 }

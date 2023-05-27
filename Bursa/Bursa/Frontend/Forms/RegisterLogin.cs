@@ -9,10 +9,10 @@ using System.Linq;
 
 namespace Bursa.Frontend.Forms
 {
-
     public partial class RegisterLogin : Form
     {
-        //public BindingList<User> users = UserManager.GetUsers();
+        public static string loggedusername;
+
         public RegisterLogin()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace Bursa.Frontend.Forms
         private bool IsLoginValid()
         {
 
-            if (string.IsNullOrEmpty(username_label_log.Text) || string.IsNullOrEmpty(password_text_log.Text))
+            if (string.IsNullOrEmpty(username_box_log.Text) || string.IsNullOrEmpty(username_box_log.Text))
             {
 
                 MessageBox.Show("Please fill in all the fields.", "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -43,26 +43,24 @@ namespace Bursa.Frontend.Forms
             }
             else
             {
-                return true; 
+                
 
-                // to be fixed -------------
+                User targetUser = UserManager.users.FirstOrDefault(user => user.Username == username_box_log.Text);
+                User targetUser2 = UserManager.users.FirstOrDefault(user => user.Password == password_text_log.Text);
 
-                //string usernameInput = username_label_log.Text;
-                //string passwordInput = password_text_log.Text;
 
-                //User user = UserManager.users.FirstOrDefault(u => u.Username == usernameInput && u.Password == passwordInput);
+                if (targetUser != null && (targetUser == targetUser2))
+                {
+                    loggedusername = username_box_log.Text;
 
-                ////isUserValid = UserManager.GetUsers().Any(user => user.Username == usernameInput && user.Password == passwordInput);
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username / Password.", "Wrong Information.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
 
-                //if (user != null)
-                //{
-                //    return true;
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Wrong Username / Password.", "Wrong Information.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    return false;
-                //}
             }
 
         }
@@ -85,6 +83,7 @@ namespace Bursa.Frontend.Forms
                 MainForm.welc.BringToFront();
                 MainForm.reglog.Visible = false;
 
+                loggedusername = Username;
 
                 this.Close();
             }
@@ -96,7 +95,7 @@ namespace Bursa.Frontend.Forms
     
             if (string.IsNullOrEmpty(usernamebox_reg.Text) || string.IsNullOrEmpty(passwordbox_reg.Text) ||
                 string.IsNullOrEmpty(emailbox.Text)) {
-          
+                
                 MessageBox.Show("Please fill in all the fields.", "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }

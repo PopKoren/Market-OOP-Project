@@ -30,121 +30,161 @@ namespace Bursa.Frontend.UserControls
         private void InitializeComponent()
         {
             this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.Sellbtc = new System.Windows.Forms.Button();
+            this.SellETH = new System.Windows.Forms.Button();
+            this.SellHIT = new System.Windows.Forms.Button();
+            this.HITam = new System.Windows.Forms.Label();
+            this.ETHam = new System.Windows.Forms.Label();
+            this.BTCam = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.HITbox = new System.Windows.Forms.TextBox();
+            this.ETHbox = new System.Windows.Forms.TextBox();
+            this.BTCbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(68, 58);
+            this.label14.Location = new System.Drawing.Point(164, 36);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 24);
             this.label14.TabIndex = 47;
             this.label14.Text = "Sell";
             // 
-            // label11
+            // Sellbtc
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(90, 190);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 20);
-            this.label11.TabIndex = 46;
-            this.label11.Text = "Apple";
+            this.Sellbtc.Location = new System.Drawing.Point(412, 109);
+            this.Sellbtc.Name = "Sellbtc";
+            this.Sellbtc.Size = new System.Drawing.Size(75, 23);
+            this.Sellbtc.TabIndex = 38;
+            this.Sellbtc.Text = "Sell";
+            this.Sellbtc.UseVisualStyleBackColor = true;
+            this.Sellbtc.Click += new System.EventHandler(this.Sellbtc_Click);
             // 
-            // label12
+            // SellETH
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(90, 146);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 20);
-            this.label12.TabIndex = 45;
-            this.label12.Text = "ETH";
+            this.SellETH.Location = new System.Drawing.Point(412, 152);
+            this.SellETH.Name = "SellETH";
+            this.SellETH.Size = new System.Drawing.Size(75, 23);
+            this.SellETH.TabIndex = 39;
+            this.SellETH.Text = "Sell";
+            this.SellETH.UseVisualStyleBackColor = true;
+            this.SellETH.Click += new System.EventHandler(this.SellETH_Click);
             // 
-            // label13
+            // SellHIT
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(90, 103);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 20);
-            this.label13.TabIndex = 44;
-            this.label13.Text = "BTC";
+            this.SellHIT.Location = new System.Drawing.Point(412, 195);
+            this.SellHIT.Name = "SellHIT";
+            this.SellHIT.Size = new System.Drawing.Size(75, 23);
+            this.SellHIT.TabIndex = 40;
+            this.SellHIT.Text = "Sell";
+            this.SellHIT.UseVisualStyleBackColor = true;
+            this.SellHIT.Click += new System.EventHandler(this.SellHIT_Click);
             // 
-            // textBox10
+            // HITam
             // 
-            this.textBox10.Location = new System.Drawing.Point(160, 187);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 43;
+            this.HITam.AutoSize = true;
+            this.HITam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HITam.Location = new System.Drawing.Point(232, 202);
+            this.HITam.Name = "HITam";
+            this.HITam.Size = new System.Drawing.Size(51, 20);
+            this.HITam.TabIndex = 59;
+            this.HITam.Text = "label6";
             // 
-            // textBox11
+            // ETHam
             // 
-            this.textBox11.Location = new System.Drawing.Point(160, 141);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 42;
+            this.ETHam.AutoSize = true;
+            this.ETHam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ETHam.Location = new System.Drawing.Point(232, 154);
+            this.ETHam.Name = "ETHam";
+            this.ETHam.Size = new System.Drawing.Size(51, 20);
+            this.ETHam.TabIndex = 58;
+            this.ETHam.Text = "label5";
             // 
-            // textBox12
+            // BTCam
             // 
-            this.textBox12.Location = new System.Drawing.Point(160, 100);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 41;
+            this.BTCam.AutoSize = true;
+            this.BTCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTCam.Location = new System.Drawing.Point(231, 109);
+            this.BTCam.Name = "BTCam";
+            this.BTCam.Size = new System.Drawing.Size(27, 20);
+            this.BTCam.TabIndex = 57;
+            this.BTCam.Text = "50";
             // 
-            // button10
+            // label4
             // 
-            this.button10.Location = new System.Drawing.Point(266, 184);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 40;
-            this.button10.Text = "Sell";
-            this.button10.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(32, 197);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 20);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "HIT  - Available amount";
             // 
-            // button11
+            // label3
             // 
-            this.button11.Location = new System.Drawing.Point(266, 141);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 39;
-            this.button11.Text = "Sell";
-            this.button11.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 20);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "ETH  - Available amount";
             // 
-            // button12
+            // label2
             // 
-            this.button12.Location = new System.Drawing.Point(266, 98);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 38;
-            this.button12.Text = "Sell";
-            this.button12.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 40);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "BTC  - Available amount\r\n\r\n";
+            // 
+            // HITbox
+            // 
+            this.HITbox.Location = new System.Drawing.Point(292, 197);
+            this.HITbox.Name = "HITbox";
+            this.HITbox.Size = new System.Drawing.Size(100, 20);
+            this.HITbox.TabIndex = 53;
+            // 
+            // ETHbox
+            // 
+            this.ETHbox.Location = new System.Drawing.Point(292, 151);
+            this.ETHbox.Name = "ETHbox";
+            this.ETHbox.Size = new System.Drawing.Size(100, 20);
+            this.ETHbox.TabIndex = 52;
+            // 
+            // BTCbox
+            // 
+            this.BTCbox.Location = new System.Drawing.Point(292, 108);
+            this.BTCbox.Name = "BTCbox";
+            this.BTCbox.Size = new System.Drawing.Size(100, 20);
+            this.BTCbox.TabIndex = 51;
             // 
             // SellCrypto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.HITam);
+            this.Controls.Add(this.ETHam);
+            this.Controls.Add(this.BTCam);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.HITbox);
+            this.Controls.Add(this.ETHbox);
+            this.Controls.Add(this.BTCbox);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.SellHIT);
+            this.Controls.Add(this.SellETH);
+            this.Controls.Add(this.Sellbtc);
             this.Name = "SellCrypto";
-            this.Size = new System.Drawing.Size(408, 269);
+            this.Size = new System.Drawing.Size(521, 269);
+            this.Load += new System.EventHandler(this.SellCrypto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,14 +193,17 @@ namespace Bursa.Frontend.UserControls
         #endregion
 
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button Sellbtc;
+        private System.Windows.Forms.Button SellETH;
+        private System.Windows.Forms.Button SellHIT;
+        private System.Windows.Forms.Label HITam;
+        private System.Windows.Forms.Label ETHam;
+        private System.Windows.Forms.Label BTCam;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox HITbox;
+        private System.Windows.Forms.TextBox ETHbox;
+        private System.Windows.Forms.TextBox BTCbox;
     }
 }

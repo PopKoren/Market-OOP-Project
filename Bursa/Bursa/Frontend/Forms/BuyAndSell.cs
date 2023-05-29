@@ -27,12 +27,6 @@ namespace Bursa.Frontend.Forms
             BuySellPanel.Controls.Add(buyst);
             BuySellPanel.Controls.Add(sellst);
 
-
-            //buycr.Visible = false;
-            //sellcr.Visible = false;
-            //buyst.Visible = false;
-            //sellst.Visible = false;
-
             BuySellPanel.Visible = false;
 
         }

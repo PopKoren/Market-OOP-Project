@@ -116,4 +116,5 @@ C:\Users\koren\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.csproj.CoreC
 C:\Users\koren\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.exe.config
 C:\Users\koren\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.exe
 C:\Users\koren\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.pdb
+C:\Users\koren\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.Signature.resources
 C:\Users\koren\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.csprojAssemblyReference.cache

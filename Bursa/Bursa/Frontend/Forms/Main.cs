@@ -33,38 +33,20 @@ namespace Bursa
             panel1.Controls.Add(welc);
             panel1.Controls.Add(reglog);
             welc.Visible = false;
-
-            //ShowRegisterOrLogin();
-
             BTCPrice.Hide();
             ETHPrice.Hide(); 
             HITPrice.Hide();
+            ApplePrice.Hide();
+            TeslaPrice.Hide();
+            PfizerPrice.Hide();
 
             this.FormClosing += new FormClosingEventHandler(UserManager.SaveUsers);
         }
-
-
-
-        //public void ShowWelcome()
-        //{
-        //    welcome2.Visible = true;
-        //    registerOrLogin2.Visible = false;
-
-        //}
-
-        //public void ShowRegisterOrLogin()
-        //{
-        //    welcome2.Visible = false;
-        //    registerOrLogin2.Visible = true;
-        //}
-
-       
         private void Label4_Click(object sender, EventArgs e)
         {
             if (CheckIfLogged())
             {
-                BuyAndSell buysell = new BuyAndSell();
-                buysell.ShowDialog();
+                OpenBuySell();
             }
         }
 
@@ -72,8 +54,7 @@ namespace Bursa
         {
             if (CheckIfLogged())
             {
-                BuyAndSell buysell = new BuyAndSell();
-                buysell.ShowDialog();
+                OpenBuySell();
             }
         }
 
@@ -81,8 +62,7 @@ namespace Bursa
         {
             if (CheckIfLogged())
             {
-                BuyAndSell buysell = new BuyAndSell();
-                buysell.ShowDialog();
+                OpenBuySell();
             }
 
         }
@@ -91,8 +71,7 @@ namespace Bursa
         {
             if (CheckIfLogged())
             {
-                BuyAndSell buysell = new BuyAndSell();
-                buysell.ShowDialog();
+                OpenBuySell();
             }
         }
 
@@ -100,8 +79,7 @@ namespace Bursa
         {
             if (CheckIfLogged())
             {
-                BuyAndSell buysell = new BuyAndSell();
-                buysell.ShowDialog();
+                OpenBuySell();
             }
         }
 
@@ -109,27 +87,14 @@ namespace Bursa
         {
             if (CheckIfLogged())
             {
-                BuyAndSell buysell = new BuyAndSell();
-                buysell.ShowDialog();
+                OpenBuySell();
             }
 
         }
 
        public bool CheckIfLogged()
         {
-
-            //bool isUserControlVisible = false;
-
-            //foreach (Control control in panel1.Controls)
-            //{
-            //    if (control == welc && control.Visible)
-            //    {
-            //        // userControl1 is visible
-            //        isUserControlVisible = true;
-            //        break;
-            //    }
-            //}
-
+  
             if (welc.Visible == true)
             {
                 return true;
@@ -140,10 +105,18 @@ namespace Bursa
 
                 return false;
             }
-           
+
+        }
+        private void OpenBuySell()
+        {
+            if (CheckIfLogged())
+            {
+                BuyAndSell buysell = new BuyAndSell();
+                buysell.ShowDialog();
+            }
         }
 
-        private async void MainForm_Load(object sender, EventArgs e)
+    private async void MainForm_Load(object sender, EventArgs e)
         {
             // ------------------------------------------ //
             // BTC PRICE //
@@ -154,11 +127,13 @@ namespace Bursa
             string responseContent = await client.GetStringAsync("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD");
 
             responseContent = responseContent.Substring(7, 5);
+          
 
-
-            BTCPrice.Text = responseContent;
+            BTCPrice.Text = responseContent + " $";
             int.TryParse(BTCPrice.Text, out btcprice);
             BTCPrice.Show();
+            ApplePrice.Show();
+
 
             // ------------------------------------------ //
             // ETH PRICE //
@@ -168,14 +143,16 @@ namespace Bursa
             string responseContent2 = await client2.GetStringAsync("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD");
             responseContent2 = responseContent2.Substring(7, 4);
 
-            ETHPrice.Text = responseContent2;
+            ETHPrice.Text = responseContent2 + " $";
             int.TryParse(ETHPrice.Text, out ethprice);
             ETHPrice.Show();
+            TeslaPrice.Show();
+
             // ------------------------------------------ //
 
             HITPrice.Show();
+            PfizerPrice.Show();
 
-           
         }
 
 

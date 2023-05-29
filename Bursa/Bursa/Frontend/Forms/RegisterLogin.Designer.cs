@@ -70,6 +70,7 @@
             // 
             this.passwordbox_reg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordbox_reg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passwordbox_reg.ForeColor = System.Drawing.Color.Black;
             this.passwordbox_reg.Location = new System.Drawing.Point(179, 188);
             this.passwordbox_reg.MaxLength = 15;
             this.passwordbox_reg.Name = "passwordbox_reg";

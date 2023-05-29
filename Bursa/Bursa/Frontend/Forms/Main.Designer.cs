@@ -43,11 +43,11 @@
             this.ETHPrice = new System.Windows.Forms.Label();
             this.HITPrice = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.registerOrLogin2 = new Bursa.Frontend.UserControls.RegisterOrLogin();
-            this.welcome2 = new Bursa.Frontend.UserControls.Welcome();
             this.TeslaPrice = new System.Windows.Forms.Label();
             this.ApplePrice = new System.Windows.Forms.Label();
             this.PfizerPrice = new System.Windows.Forms.Label();
+            this.registerOrLogin2 = new Bursa.Frontend.UserControls.RegisterOrLogin();
+            this.welcome2 = new Bursa.Frontend.UserControls.Welcome();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -164,7 +164,7 @@
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(42, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(499, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(478, 85);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -197,9 +197,9 @@
             this.HITPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HITPrice.Location = new System.Drawing.Point(569, 334);
             this.HITPrice.Name = "HITPrice";
-            this.HITPrice.Size = new System.Drawing.Size(54, 25);
+            this.HITPrice.Size = new System.Drawing.Size(72, 25);
             this.HITPrice.TabIndex = 17;
-            this.HITPrice.Text = "1.00";
+            this.HITPrice.Text = "1.00 $";
             // 
             // panel1
             // 
@@ -210,6 +210,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 143);
             this.panel1.TabIndex = 18;
+            // 
+            // TeslaPrice
+            // 
+            this.TeslaPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TeslaPrice.AutoSize = true;
+            this.TeslaPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeslaPrice.Location = new System.Drawing.Point(169, 302);
+            this.TeslaPrice.Name = "TeslaPrice";
+            this.TeslaPrice.Size = new System.Drawing.Size(66, 25);
+            this.TeslaPrice.TabIndex = 20;
+            this.TeslaPrice.Text = "200 $";
+            // 
+            // ApplePrice
+            // 
+            this.ApplePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ApplePrice.AutoSize = true;
+            this.ApplePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplePrice.Location = new System.Drawing.Point(169, 266);
+            this.ApplePrice.Name = "ApplePrice";
+            this.ApplePrice.Size = new System.Drawing.Size(66, 25);
+            this.ApplePrice.TabIndex = 19;
+            this.ApplePrice.Text = "175 $\r\n";
+            // 
+            // PfizerPrice
+            // 
+            this.PfizerPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PfizerPrice.AutoSize = true;
+            this.PfizerPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PfizerPrice.Location = new System.Drawing.Point(176, 340);
+            this.PfizerPrice.Name = "PfizerPrice";
+            this.PfizerPrice.Size = new System.Drawing.Size(54, 25);
+            this.PfizerPrice.TabIndex = 21;
+            this.PfizerPrice.Text = "40 $";
             // 
             // registerOrLogin2
             // 
@@ -227,44 +260,11 @@
             this.welcome2.Size = new System.Drawing.Size(200, 143);
             this.welcome2.TabIndex = 1;
             // 
-            // TeslaPrice
-            // 
-            this.TeslaPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TeslaPrice.AutoSize = true;
-            this.TeslaPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeslaPrice.Location = new System.Drawing.Point(169, 302);
-            this.TeslaPrice.Name = "TeslaPrice";
-            this.TeslaPrice.Size = new System.Drawing.Size(48, 25);
-            this.TeslaPrice.TabIndex = 20;
-            this.TeslaPrice.Text = "200";
-            // 
-            // ApplePrice
-            // 
-            this.ApplePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ApplePrice.AutoSize = true;
-            this.ApplePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplePrice.Location = new System.Drawing.Point(169, 266);
-            this.ApplePrice.Name = "ApplePrice";
-            this.ApplePrice.Size = new System.Drawing.Size(48, 25);
-            this.ApplePrice.TabIndex = 19;
-            this.ApplePrice.Text = "175";
-            // 
-            // PfizerPrice
-            // 
-            this.PfizerPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PfizerPrice.AutoSize = true;
-            this.PfizerPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PfizerPrice.Location = new System.Drawing.Point(176, 340);
-            this.PfizerPrice.Name = "PfizerPrice";
-            this.PfizerPrice.Size = new System.Drawing.Size(36, 25);
-            this.PfizerPrice.TabIndex = 21;
-            this.PfizerPrice.Text = "40";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PfizerPrice);
             this.Controls.Add(this.TeslaPrice);
@@ -286,7 +286,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form1";
+            this.Text = "Main Form";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

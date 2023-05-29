@@ -15,7 +15,7 @@ namespace Bursa.Frontend.UserControls
 {
     public partial class SellStocks : UserControl
     {
-        User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
+        readonly User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
 
         public SellStocks()
         {
@@ -44,7 +44,14 @@ namespace Bursa.Frontend.UserControls
 
         private void SellTesla_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(TesAM.Text))
+
+            if (!int.TryParse(TesAM.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TesAM.Clear();
+                return;
+            }
+            if (!string.IsNullOrEmpty(TesAM.Text) && int.Parse(TesAM.Text) >= 0)
             {
                 if (targetUser.StocksPortfolio[0].Quantity >= int.Parse(TesAM.Text))
                 {
@@ -63,14 +70,22 @@ namespace Bursa.Frontend.UserControls
             }
             else
             {
-                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid Number!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
 
         private void SellApple_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(AppAM.Text))
+
+            if (!int.TryParse(AppAM.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                AppAM.Clear();
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(AppAM.Text) && int.Parse(AppAM.Text) >= 0)
             {
                 if (targetUser.StocksPortfolio[1].Quantity >= int.Parse(AppAM.Text))
                 {
@@ -89,14 +104,22 @@ namespace Bursa.Frontend.UserControls
             }
             else
             {
-                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid Number!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
 
         private void SellPfizer_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(PfizAM.Text))
+
+            if (!int.TryParse(PfizAM.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PfizAM.Clear();
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(PfizAM.Text) && int.Parse(PfizAM.Text) >= 0)
             {
                 if (targetUser.StocksPortfolio[2].Quantity >= int.Parse(PfizAM.Text))
                 {
@@ -115,7 +138,7 @@ namespace Bursa.Frontend.UserControls
             }
             else
             {
-                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid Number!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UserProfileView = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.HelloLabel = new System.Windows.Forms.Label();
@@ -40,8 +41,15 @@
             // 
             this.UserProfileView.AllowUserToAddRows = false;
             this.UserProfileView.AllowUserToDeleteRows = false;
-            this.UserProfileView.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UserProfileView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UserProfileView.DefaultCellStyle = dataGridViewCellStyle1;
             this.UserProfileView.Location = new System.Drawing.Point(47, 143);
             this.UserProfileView.Name = "UserProfileView";
             this.UserProfileView.ReadOnly = true;
@@ -71,8 +79,10 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
             this.comboBox1.Items.AddRange(new object[] {
             "Cryptocurrency",
             "Stocks"});
@@ -80,7 +90,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(188, 33);
             this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // deleteAcc
             // 
@@ -91,7 +101,7 @@
             this.deleteAcc.TabIndex = 4;
             this.deleteAcc.Text = "Delete Account";
             this.deleteAcc.UseVisualStyleBackColor = true;
-            this.deleteAcc.Click += new System.EventHandler(this.deleteAcc_Click);
+            this.deleteAcc.Click += new System.EventHandler(this.DeleteAcc_Click);
             // 
             // UserProfile
             // 
@@ -104,7 +114,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UserProfileView);
             this.Name = "UserProfile";
-            this.Text = "UserInterface";
+            this.Text = "Profile";
             this.Load += new System.EventHandler(this.UserProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UserProfileView)).EndInit();
             this.ResumeLayout(false);

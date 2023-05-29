@@ -16,7 +16,7 @@ namespace Bursa.Frontend.UserControls
 
     public partial class SellCrypto : UserControl
     {
-        User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
+        readonly User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
 
         public SellCrypto()
         {
@@ -44,9 +44,18 @@ namespace Bursa.Frontend.UserControls
 
         private void Sellbtc_Click(object sender, EventArgs e)
         {
+
+            if (!int.TryParse(BTCbox.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                BTCbox.Clear();
+                return;
+
+            }
+
             if (!string.IsNullOrEmpty(BTCbox.Text))
             {
-                if (targetUser.CryptoPortfolio[0].Quantity >= int.Parse(BTCbox.Text))
+                if (targetUser.CryptoPortfolio[0].Quantity >= int.Parse(BTCbox.Text) && int.Parse(BTCbox.Text) >= 0)
                 {
                     targetUser.CryptoPortfolio[0].Quantity -= int.Parse(BTCbox.Text);
                     BTCbox.Clear();
@@ -63,16 +72,24 @@ namespace Bursa.Frontend.UserControls
             }
             else
             {
-                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
 
         private void SellETH_Click(object sender, EventArgs e)
         {
+
+            if (!int.TryParse(ETHbox.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ETHbox.Clear();
+                return;
+
+            }
             if (!string.IsNullOrEmpty(ETHbox.Text))
             {
-                if (targetUser.CryptoPortfolio[1].Quantity >= int.Parse(ETHbox.Text))
+                if (targetUser.CryptoPortfolio[1].Quantity >= int.Parse(ETHbox.Text) && int.Parse(ETHbox.Text) >= 0)
                 {
                     targetUser.CryptoPortfolio[1].Quantity -= int.Parse(ETHbox.Text);
                     ETHbox.Clear();
@@ -89,16 +106,24 @@ namespace Bursa.Frontend.UserControls
             }
             else
             {
-                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
 
         private void SellHIT_Click(object sender, EventArgs e)
         {
+         
+            if (!int.TryParse(HITbox.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                HITbox.Clear();
+                return;
+
+            }
             if (!string.IsNullOrEmpty(HITbox.Text))
             {
-                if (targetUser.CryptoPortfolio[2].Quantity >= int.Parse(HITbox.Text))
+                if (targetUser.CryptoPortfolio[2].Quantity >= int.Parse(HITbox.Text) && int.Parse(HITbox.Text) >= 0)
                 {
                     targetUser.CryptoPortfolio[2].Quantity -= int.Parse(HITbox.Text);
                     HITbox.Clear();
@@ -115,7 +140,7 @@ namespace Bursa.Frontend.UserControls
             }
             else
             {
-                MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }

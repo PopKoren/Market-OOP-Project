@@ -68,28 +68,45 @@ namespace Bursa.Frontend.Forms
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             
-            if (IsValidForm() && IsValidBirthDate())
+            if (IsValidForm() && IsValidBirthDate() && !IsDuplicatedName())
             {
                 string Username = usernamebox_reg.Text;
                 string Password = passwordbox_reg.Text;
                 DateTime dateofbirth = dateTimePicker.Value;
                 string email = emailbox.Text;
 
+                Signature sign = new Signature();
+                sign.ShowDialog();
 
-                User newuser = new User(Username, Password, dateofbirth, email);
-                UserManager.AddUser(newuser);
+                if (!sign.IsPictureBoxNull())
+                {   
 
-                MainForm.welc.Visible = true;
-                MainForm.welc.BringToFront();
-                MainForm.reglog.Visible = false;
+                    User newuser = new User(Username, Password, dateofbirth, email);
+                    UserManager.AddUser(newuser);
 
-                loggedusername = Username;
+                    MainForm.welc.Visible = true;
+                    MainForm.welc.BringToFront();
+                    MainForm.reglog.Visible = false;
 
-                this.Close();
+                    loggedusername = Username;
+
+                    this.Close();
+                }
             }
 
         }
+        private bool IsDuplicatedName()
+        {
+            User targetUser = UserManager.users.FirstOrDefault(user => user.Username == usernamebox_reg.Text);
+            if (targetUser != null)
+            {
+                MessageBox.Show("Username is already taken.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+                return true;
+            }
+            return false;
+
+        }
         private bool IsValidForm()
         {
     

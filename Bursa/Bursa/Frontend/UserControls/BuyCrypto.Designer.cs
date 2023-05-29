@@ -97,7 +97,7 @@ namespace Bursa.Frontend.UserControls
             // 
             // BuyHIT
             // 
-            this.BuyHIT.Location = new System.Drawing.Point(389, 215);
+            this.BuyHIT.Location = new System.Drawing.Point(407, 215);
             this.BuyHIT.Name = "BuyHIT";
             this.BuyHIT.Size = new System.Drawing.Size(75, 23);
             this.BuyHIT.TabIndex = 13;
@@ -107,7 +107,7 @@ namespace Bursa.Frontend.UserControls
             // 
             // BuyETH
             // 
-            this.BuyETH.Location = new System.Drawing.Point(389, 172);
+            this.BuyETH.Location = new System.Drawing.Point(407, 172);
             this.BuyETH.Name = "BuyETH";
             this.BuyETH.Size = new System.Drawing.Size(75, 23);
             this.BuyETH.TabIndex = 12;
@@ -117,7 +117,7 @@ namespace Bursa.Frontend.UserControls
             // 
             // BuyBTC
             // 
-            this.BuyBTC.Location = new System.Drawing.Point(389, 126);
+            this.BuyBTC.Location = new System.Drawing.Point(407, 126);
             this.BuyBTC.Name = "BuyBTC";
             this.BuyBTC.Size = new System.Drawing.Size(75, 23);
             this.BuyBTC.TabIndex = 11;

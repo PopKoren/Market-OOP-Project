@@ -15,8 +15,7 @@ namespace Bursa.Frontend.UserControls
 {
     public partial class BuyCrypto : UserControl
     {
-
-        User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
+        readonly User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
 
 
         public BuyCrypto()
@@ -47,6 +46,14 @@ namespace Bursa.Frontend.UserControls
         
         private void BuyBTC_Click(object sender, EventArgs e)
         {
+
+            if (!int.TryParse(BTCamount.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                BTCamount.Clear();
+                return;
+            }
+
             if (!string.IsNullOrEmpty(BTCamount.Text))
             {
                 targetUser.CryptoPortfolio[0].Quantity += int.Parse(BTCamount.Text);
@@ -64,6 +71,14 @@ namespace Bursa.Frontend.UserControls
 
         private void BuyETH_Click(object sender, EventArgs e)
         {
+
+            if (!int.TryParse(ETHamount.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ETHamount.Clear();
+                return;
+
+            }
             if (!string.IsNullOrEmpty(ETHamount.Text))
             {
                 targetUser.CryptoPortfolio[1].Quantity += int.Parse(ETHamount.Text);
@@ -81,6 +96,14 @@ namespace Bursa.Frontend.UserControls
 
         private void BuyHIT_Click(object sender, EventArgs e)
         {
+
+            if (!int.TryParse(HITamount.Text, out int result))
+            {
+                MessageBox.Show("Invalid Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                HITamount.Clear();
+                return;
+
+            }
             if (!string.IsNullOrEmpty(HITamount.Text))
             {
                 targetUser.CryptoPortfolio[2].Quantity += int.Parse(HITamount.Text);

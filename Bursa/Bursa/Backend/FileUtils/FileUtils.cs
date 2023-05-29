@@ -35,7 +35,7 @@ namespace Bursa.Backend
                     Users = (BindingList<User>)binaryFormatter.Deserialize(binaryFile);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Users = new BindingList<User>();
             }

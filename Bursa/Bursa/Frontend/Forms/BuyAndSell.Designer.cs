@@ -42,6 +42,8 @@ namespace Bursa.Frontend.Forms
             // 
             // BuyOrSellBox
             // 
+            this.BuyOrSellBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BuyOrSellBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BuyOrSellBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuyOrSellBox.FormattingEnabled = true;
             this.BuyOrSellBox.Items.AddRange(new object[] {
@@ -85,30 +87,30 @@ namespace Bursa.Frontend.Forms
             // 
             // sellStocks1
             // 
-            this.sellStocks1.Location = new System.Drawing.Point(12, 40);
+            this.sellStocks1.Location = new System.Drawing.Point(3, 3);
             this.sellStocks1.Name = "sellStocks1";
-            this.sellStocks1.Size = new System.Drawing.Size(519, 274);
+            this.sellStocks1.Size = new System.Drawing.Size(537, 385);
             this.sellStocks1.TabIndex = 3;
             // 
             // sellCrypto1
             // 
-            this.sellCrypto1.Location = new System.Drawing.Point(3, 66);
+            this.sellCrypto1.Location = new System.Drawing.Point(-13, -3);
             this.sellCrypto1.Name = "sellCrypto1";
-            this.sellCrypto1.Size = new System.Drawing.Size(521, 269);
+            this.sellCrypto1.Size = new System.Drawing.Size(534, 382);
             this.sellCrypto1.TabIndex = 2;
             // 
             // buyStocks1
             // 
-            this.buyStocks1.Location = new System.Drawing.Point(21, 50);
+            this.buyStocks1.Location = new System.Drawing.Point(-3, 0);
             this.buyStocks1.Name = "buyStocks1";
-            this.buyStocks1.Size = new System.Drawing.Size(469, 299);
+            this.buyStocks1.Size = new System.Drawing.Size(537, 379);
             this.buyStocks1.TabIndex = 1;
             // 
             // buyCrypto1
             // 
-            this.buyCrypto1.Location = new System.Drawing.Point(12, 50);
+            this.buyCrypto1.Location = new System.Drawing.Point(0, 3);
             this.buyCrypto1.Name = "buyCrypto1";
-            this.buyCrypto1.Size = new System.Drawing.Size(512, 295);
+            this.buyCrypto1.Size = new System.Drawing.Size(537, 379);
             this.buyCrypto1.TabIndex = 0;
             // 
             // BuyAndSell
@@ -121,7 +123,7 @@ namespace Bursa.Frontend.Forms
             this.Controls.Add(this.BuyButton);
             this.Controls.Add(this.BuyOrSellBox);
             this.Name = "BuyAndSell";
-            this.Text = "Form1";
+            this.Text = "Buy and Sell";
             this.BuySellPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

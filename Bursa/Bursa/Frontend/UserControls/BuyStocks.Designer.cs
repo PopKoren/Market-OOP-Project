@@ -46,7 +46,7 @@ namespace Bursa.Frontend.UserControls
             // 
             // BuyPfizer
             // 
-            this.BuyPfizer.Location = new System.Drawing.Point(381, 209);
+            this.BuyPfizer.Location = new System.Drawing.Point(393, 207);
             this.BuyPfizer.Name = "BuyPfizer";
             this.BuyPfizer.Size = new System.Drawing.Size(75, 23);
             this.BuyPfizer.TabIndex = 27;
@@ -56,7 +56,7 @@ namespace Bursa.Frontend.UserControls
             // 
             // BuyApple
             // 
-            this.BuyApple.Location = new System.Drawing.Point(381, 169);
+            this.BuyApple.Location = new System.Drawing.Point(393, 167);
             this.BuyApple.Name = "BuyApple";
             this.BuyApple.Size = new System.Drawing.Size(75, 23);
             this.BuyApple.TabIndex = 26;
@@ -66,7 +66,7 @@ namespace Bursa.Frontend.UserControls
             // 
             // BuyTesla
             // 
-            this.BuyTesla.Location = new System.Drawing.Point(381, 125);
+            this.BuyTesla.Location = new System.Drawing.Point(393, 123);
             this.BuyTesla.Name = "BuyTesla";
             this.BuyTesla.Size = new System.Drawing.Size(75, 23);
             this.BuyTesla.TabIndex = 25;

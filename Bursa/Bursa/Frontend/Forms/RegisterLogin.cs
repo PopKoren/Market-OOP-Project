@@ -78,7 +78,7 @@ namespace Bursa.Frontend.Forms
                 Signature sign = new Signature();
                 sign.ShowDialog();
 
-                if (!sign.IsPictureBoxNull())
+                if (sign.isSigned)
                 {   
 
                     User newuser = new User(Username, Password, dateofbirth, email);

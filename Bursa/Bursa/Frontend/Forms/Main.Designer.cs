@@ -56,12 +56,13 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 144);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(47, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 33);
+            this.label1.Size = new System.Drawing.Size(208, 42);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Our Items:";
+            this.label1.Text = "                   ";
             // 
             // label2
             // 
@@ -90,11 +91,12 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(87, 266);
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.Location = new System.Drawing.Point(80, 266);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 25);
+            this.label4.Size = new System.Drawing.Size(90, 25);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Apple";
+            this.label4.Text = "             ";
             this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // label5
@@ -102,11 +104,12 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(87, 303);
+            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
+            this.label5.Location = new System.Drawing.Point(80, 302);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 25);
+            this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Tesla";
+            this.label5.Text = "             ";
             this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // label6
@@ -114,11 +117,12 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(87, 340);
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.Location = new System.Drawing.Point(80, 340);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 25);
+            this.label6.Size = new System.Drawing.Size(90, 25);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Pfizer";
+            this.label6.Text = "             ";
             this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // label7
@@ -126,11 +130,12 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(468, 266);
+            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
+            this.label7.Location = new System.Drawing.Point(468, 269);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 25);
+            this.label7.Size = new System.Drawing.Size(102, 25);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Bitcoin";
+            this.label7.Text = "               ";
             this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
             // label8
@@ -138,11 +143,12 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(467, 297);
+            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
+            this.label8.Location = new System.Drawing.Point(468, 302);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 25);
+            this.label8.Size = new System.Drawing.Size(102, 25);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Etherium";
+            this.label8.Text = "               ";
             this.label8.Click += new System.EventHandler(this.Label8_Click);
             // 
             // label9
@@ -150,11 +156,12 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
             this.label9.Location = new System.Drawing.Point(467, 334);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 25);
+            this.label9.Size = new System.Drawing.Size(102, 25);
             this.label9.TabIndex = 8;
-            this.label9.Text = "HIT";
+            this.label9.Text = "               ";
             this.label9.Click += new System.EventHandler(this.Label9_Click);
             // 
             // pictureBox1
@@ -173,7 +180,7 @@
             this.BTCPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BTCPrice.AutoSize = true;
             this.BTCPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTCPrice.Location = new System.Drawing.Point(569, 266);
+            this.BTCPrice.Location = new System.Drawing.Point(575, 269);
             this.BTCPrice.Name = "BTCPrice";
             this.BTCPrice.Size = new System.Drawing.Size(88, 25);
             this.BTCPrice.TabIndex = 15;
@@ -184,7 +191,7 @@
             this.ETHPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ETHPrice.AutoSize = true;
             this.ETHPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ETHPrice.Location = new System.Drawing.Point(568, 297);
+            this.ETHPrice.Location = new System.Drawing.Point(575, 302);
             this.ETHPrice.Name = "ETHPrice";
             this.ETHPrice.Size = new System.Drawing.Size(89, 25);
             this.ETHPrice.TabIndex = 16;
@@ -195,7 +202,7 @@
             this.HITPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HITPrice.AutoSize = true;
             this.HITPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HITPrice.Location = new System.Drawing.Point(569, 334);
+            this.HITPrice.Location = new System.Drawing.Point(576, 334);
             this.HITPrice.Name = "HITPrice";
             this.HITPrice.Size = new System.Drawing.Size(72, 25);
             this.HITPrice.TabIndex = 17;
@@ -247,6 +254,7 @@
             // registerOrLogin2
             // 
             this.registerOrLogin2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.registerOrLogin2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("registerOrLogin2.BackgroundImage")));
             this.registerOrLogin2.Location = new System.Drawing.Point(0, 0);
             this.registerOrLogin2.Name = "registerOrLogin2";
             this.registerOrLogin2.Size = new System.Drawing.Size(200, 143);
@@ -264,7 +272,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PfizerPrice);
             this.Controls.Add(this.TeslaPrice);

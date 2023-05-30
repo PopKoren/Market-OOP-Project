@@ -29,6 +29,8 @@ namespace Bursa.Backend
         public static void DeleteUser(User newuser)
         {
             users.Remove(newuser);
+            User.UserID--;
+
         }
 
         public static void SaveUsers(object sender, FormClosingEventArgs e)

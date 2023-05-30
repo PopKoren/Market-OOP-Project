@@ -116,7 +116,7 @@ namespace Bursa
             }
         }
 
-    private async void MainForm_Load(object sender, EventArgs e)
+        private async void MainForm_Load(object sender, EventArgs e)
         {
             // ------------------------------------------ //
             // BTC PRICE //

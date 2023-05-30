@@ -71,7 +71,8 @@ namespace Bursa.Frontend.Forms
 
         private void UserProfile_Load(object sender, EventArgs e)
         {
-            HelloLabel.Text = "Hello " + RegisterLogin.loggedusername + "!";
+            HelloLabel.Text = "Hello " + RegisterLogin.loggedusername + "!" + "\nYour #ID: " + targetUser.ShowUserID;
+
         }
 
         private void DeleteAcc_Click(object sender, EventArgs e)

@@ -59,7 +59,8 @@ namespace Bursa.Frontend.UserControls
                 targetUser.CryptoPortfolio[0].Quantity += int.Parse(BTCamount.Text);
                 BTCamount.Clear();
                 UpdatePrices();
-                MessageBox.Show("Successfully Purchase", "Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ShowPicture(targetUser.CryptoPortfolio[0]);
+
 
             }
             else
@@ -84,7 +85,7 @@ namespace Bursa.Frontend.UserControls
                 targetUser.CryptoPortfolio[1].Quantity += int.Parse(ETHamount.Text);
                 ETHamount.Clear();
                 UpdatePrices();
-                MessageBox.Show("Successfully Purchase", "Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ShowPicture(targetUser.CryptoPortfolio[1]);
 
             }
             else
@@ -109,13 +110,23 @@ namespace Bursa.Frontend.UserControls
                 targetUser.CryptoPortfolio[2].Quantity += int.Parse(HITamount.Text);
                 HITamount.Clear();
                 UpdatePrices();
-                MessageBox.Show("Successfully Purchase", "Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                ShowPicture(targetUser.CryptoPortfolio[2]);
             }
             else
             {
                 MessageBox.Show("Wrong Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            }
+        }
+
+        private void ShowPicture(Crypto crypto)
+        {
+
+            if (crypto != null)
+            {
+                Image picture = crypto.GetPicture();
+                PictureForm image = new PictureForm(picture);
+                image.ShowDialog();
             }
         }
     }

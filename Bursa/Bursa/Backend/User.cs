@@ -11,7 +11,7 @@ namespace Bursa.Backend.Models
     public class User
     {
 
-        public BindingList<Crypto> CryptoPortfolio { get; set; } =  new BindingList<Crypto>();
+        public BindingList<Crypto> CryptoPortfolio { get; set; } = new BindingList<Crypto>();
         public BindingList<Stock> StocksPortfolio { get; set; } = new BindingList<Stock>();
 
         public string Username { get; set; }
@@ -20,8 +20,14 @@ namespace Bursa.Backend.Models
         public string Email { get; set; }
         public double TotalBalance { get; set; }
 
+        public int ShowUserID { get; set; }
+
+        static public int UserID = 0;
+
         public User(string username, string password, DateTime dateofbirth, string email, double balance = 0)
         {
+            UserID++;
+            ShowUserID = UserID;
             Username = username;
             Password = password;
             Dateofbirth = dateofbirth.ToShortDateString();
@@ -48,8 +54,8 @@ namespace Bursa.Backend.Models
             StocksPortfolio.Add(pfizer);
 
 
-
         }
+       
 
         public BindingList<Crypto> GetCrypto()
         {

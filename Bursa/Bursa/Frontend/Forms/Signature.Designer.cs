@@ -47,13 +47,14 @@ namespace Bursa.Frontend.Forms
             // 
             // signaturePictureBox
             // 
-            this.signaturePictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.signaturePictureBox.BackColor = System.Drawing.SystemColors.Control;
             this.signaturePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.signaturePictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.signaturePictureBox.Location = new System.Drawing.Point(30, 76);
+            this.signaturePictureBox.InitialImage = null;
+            this.signaturePictureBox.Location = new System.Drawing.Point(32, 67);
             this.signaturePictureBox.Name = "signaturePictureBox";
-            this.signaturePictureBox.Size = new System.Drawing.Size(549, 246);
+            this.signaturePictureBox.Size = new System.Drawing.Size(551, 248);
+            this.signaturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.signaturePictureBox.TabIndex = 2;
             this.signaturePictureBox.TabStop = false;
             // 
@@ -76,6 +77,7 @@ namespace Bursa.Frontend.Forms
             this.Controls.Add(this.button1);
             this.Controls.Add(this.signaturePictureBox);
             this.Name = "Signature";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signature";
             ((System.ComponentModel.ISupportInitialize)(this.signaturePictureBox)).EndInit();
             this.ResumeLayout(false);

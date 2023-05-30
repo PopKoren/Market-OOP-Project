@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,5 +22,7 @@ namespace Bursa.Backend.Models
             IsMinable = mineable;
             IsStableCoin = stable;
         }
+        public abstract override Image GetPicture();
+
     }
 }

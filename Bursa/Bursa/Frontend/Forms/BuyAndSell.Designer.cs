@@ -123,6 +123,7 @@ namespace Bursa.Frontend.Forms
             this.Controls.Add(this.BuyButton);
             this.Controls.Add(this.BuyOrSellBox);
             this.Name = "BuyAndSell";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buy and Sell";
             this.BuySellPanel.ResumeLayout(false);
             this.ResumeLayout(false);

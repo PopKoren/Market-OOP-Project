@@ -114,6 +114,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UserProfileView);
             this.Name = "UserProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.UserProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UserProfileView)).EndInit();

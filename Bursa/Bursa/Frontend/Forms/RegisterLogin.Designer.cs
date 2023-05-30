@@ -242,6 +242,7 @@
             this.Controls.Add(this.username_label_reg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RegisterLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register & Login";
             this.ResumeLayout(false);
             this.PerformLayout();

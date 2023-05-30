@@ -14,6 +14,7 @@ namespace Bursa.Frontend.Forms
     {
         public bool isDrawing = false;
         private Point previousPoint;
+        public bool isSigned = false;
 
         public Signature()
         {
@@ -28,8 +29,9 @@ namespace Bursa.Frontend.Forms
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (signaturePictureBox.Image != null)
+            if (signaturePictureBox != null)
             {
+                isSigned = true;
                 this.Close();
             }
             else

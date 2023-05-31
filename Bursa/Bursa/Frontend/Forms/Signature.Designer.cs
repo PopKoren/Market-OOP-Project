@@ -29,21 +29,21 @@ namespace Bursa.Frontend.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button1 = new System.Windows.Forms.Button();
             this.signaturePictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.signaturePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Button1
             // 
-            this.button1.Location = new System.Drawing.Point(239, 337);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Done";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.Button1.Location = new System.Drawing.Point(239, 337);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(107, 37);
+            this.Button1.TabIndex = 3;
+            this.Button1.Text = "Done";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // signaturePictureBox
             // 
@@ -74,7 +74,7 @@ namespace Bursa.Frontend.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 397);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Button1);
             this.Controls.Add(this.signaturePictureBox);
             this.Name = "Signature";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -87,7 +87,7 @@ namespace Bursa.Frontend.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.PictureBox signaturePictureBox;
         private System.Windows.Forms.Label label1;
     }

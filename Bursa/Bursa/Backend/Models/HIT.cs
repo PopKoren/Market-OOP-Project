@@ -14,14 +14,13 @@ namespace Bursa.Backend.Models
     public class HIT : Crypto
     {
         public override Image GetPicture()
-        {   
-            return Image.FromFile("C:\\Users\\lab102\\Desktop\\OOP-Project-main\\Bursa\\Bursa\\Resources\\hit.png");
+        {
+            return Bursa.Properties.Resources.hit;
 
-            
         }
 
-        public HIT(int quanity)
-            : base("HIT", quanity, 1, false, true)
+        public HIT(int quantity)
+            : base("HIT", quantity, 1, false, true)
         {
 
         }

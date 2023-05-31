@@ -13,7 +13,7 @@ namespace Bursa.Backend.Models
     {
         public override Image GetPicture()
         {
-            return Image.FromFile("C:\\Users\\lab102\\Desktop\\OOP-Project-main\\Bursa\\Bursa\\Resources\\bitcoin.png");
+            return Bursa.Properties.Resources.pfizer;
         }
 
         public Pfizer(int quantity)

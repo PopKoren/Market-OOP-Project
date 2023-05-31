@@ -22,11 +22,11 @@ namespace Bursa.Backend.Models
 
         public int ShowUserID { get; set; }
 
-        static public int UserID = 0;
+        public static int UserID = 1;
 
         public User(string username, string password, DateTime dateofbirth, string email, double balance = 0)
         {
-            UserID++;
+            
             ShowUserID = UserID;
             Username = username;
             Password = password;
@@ -34,6 +34,7 @@ namespace Bursa.Backend.Models
             Email = email;
             TotalBalance = balance;
 
+            UserID++;
 
             Bitcoin btc = new Bitcoin(0);
             Etherium eth = new Etherium(0);

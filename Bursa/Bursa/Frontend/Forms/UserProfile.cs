@@ -37,7 +37,7 @@ namespace Bursa.Frontend.Forms
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
+            //User targetUser = UserManager.users.FirstOrDefault(user => user.Username == RegisterLogin.loggedusername);
             if (targetUser != null)
             {
                 var columns = UserProfileView.Columns;
@@ -51,7 +51,7 @@ namespace Bursa.Frontend.Forms
                     columns[4].DisplayIndex = 2;
                     columns[0].HeaderText = "Minable Coin: ";
                     columns[1].HeaderText = "Stable Coin: ";
-                  
+
 
 
                 }

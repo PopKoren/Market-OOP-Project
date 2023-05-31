@@ -36,9 +36,10 @@ namespace Bursa.Frontend.Forms
             // 
             // pictureBoxBuy
             // 
-            this.pictureBoxBuy.Location = new System.Drawing.Point(12, 45);
+            this.pictureBoxBuy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBuy.Location = new System.Drawing.Point(69, 85);
             this.pictureBoxBuy.Name = "pictureBoxBuy";
-            this.pictureBoxBuy.Size = new System.Drawing.Size(520, 318);
+            this.pictureBoxBuy.Size = new System.Drawing.Size(380, 241);
             this.pictureBoxBuy.TabIndex = 0;
             this.pictureBoxBuy.TabStop = false;
             // 

@@ -40,7 +40,6 @@ C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Project\Bursa\Bursa\obj
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Project\Bursa\Bursa\obj\Debug\Bursa.exe.config
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Project\Bursa\Bursa\obj\Debug\Bursa.csprojAssemblyReference.cache
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.csprojAssemblyReference.cache
-C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.BuySell.resources
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.MainForm.resources
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.RegisterLogin.resources
 C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.UserProfile.resources
@@ -136,3 +135,10 @@ C:\Users\lab102\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.exe.config
 C:\Users\lab102\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.exe
 C:\Users\lab102\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.pdb
 C:\Users\lab102\Desktop\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.PictureForm.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.BuyAndSell.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.PictureForm.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.Forms.Signature.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.UserControls.BuyCrypto.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.UserControls.BuyStocks.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.UserControls.SellCrypto.resources
+C:\Users\koren\Desktop\OOP-Project-main\OOP-Project-main\Bursa\Bursa\obj\Debug\Bursa.Frontend.UserControls.SellStocks.resources

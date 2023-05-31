@@ -43,7 +43,7 @@ namespace Bursa.Frontend.UserControls
 
             }
         }
-        
+
         private void BuyBTC_Click(object sender, EventArgs e)
         {
 
@@ -119,12 +119,12 @@ namespace Bursa.Frontend.UserControls
             }
         }
 
-        private void ShowPicture(Crypto crypto)
+        private void ShowPicture(Item item)
         {
 
-            if (crypto != null)
+            if (item != null)
             {
-                Image picture = crypto.GetPicture();
+                Image picture = item.GetPicture();
                 PictureForm image = new PictureForm(picture);
                 image.ShowDialog();
             }

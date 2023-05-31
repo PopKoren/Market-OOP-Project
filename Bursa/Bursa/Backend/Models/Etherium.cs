@@ -21,7 +21,7 @@ namespace Bursa.Backend.Models
         }
         public override Image GetPicture()
         {
-            return Image.FromFile("C:\\Users\\lab102\\Desktop\\OOP-Project-main\\Bursa\\Bursa\\Resources\\eth.jpg");
+            return Bursa.Properties.Resources.eth;
 
         }
     }

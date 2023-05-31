@@ -78,20 +78,17 @@ namespace Bursa.Frontend.Forms
                 Signature sign = new Signature();
                 sign.ShowDialog();
 
-                if (sign.isSigned)
-                {   
+                User newuser = new User(Username, Password, dateofbirth, email);
+                UserManager.AddUser(newuser);
 
-                    User newuser = new User(Username, Password, dateofbirth, email);
-                    UserManager.AddUser(newuser);
+                MainForm.welc.Visible = true;
+                MainForm.welc.BringToFront();
+                MainForm.reglog.Visible = false;
 
-                    MainForm.welc.Visible = true;
-                    MainForm.welc.BringToFront();
-                    MainForm.reglog.Visible = false;
+                loggedusername = Username;
 
-                    loggedusername = Username;
+                this.Close();
 
-                    this.Close();
-                }
             }
 
         }

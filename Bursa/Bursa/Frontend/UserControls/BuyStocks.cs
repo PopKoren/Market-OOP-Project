@@ -54,7 +54,7 @@ namespace Bursa.Frontend.UserControls
                 targetUser.StocksPortfolio[0].Quantity += int.Parse(TeslaAm.Text);
                 TeslaAm.Clear();
                 UpdatePrices();
-                ShowPicture(targetUser.CryptoPortfolio[0]);
+                ShowPicture(targetUser.StocksPortfolio[0]);
 
             }
             else
@@ -80,7 +80,7 @@ namespace Bursa.Frontend.UserControls
                 AppleAm.Clear();
                 UpdatePrices();
 
-                ShowPicture(targetUser.CryptoPortfolio[1]);
+                ShowPicture(targetUser.StocksPortfolio[1]);
 
             }
             else
@@ -106,7 +106,7 @@ namespace Bursa.Frontend.UserControls
                 PfizerAm.Clear();
                 UpdatePrices();
 
-                ShowPicture(targetUser.CryptoPortfolio[2]);
+                ShowPicture(targetUser.StocksPortfolio[2]);
 
             }
             else
@@ -115,12 +115,12 @@ namespace Bursa.Frontend.UserControls
 
             }
         }
-        private void ShowPicture(Crypto crypto)
+        private void ShowPicture(Item item)
         {
 
-            if (crypto != null)
+            if (item != null)
             {
-                Image picture = crypto.GetPicture();
+                Image picture = item.GetPicture();
                 PictureForm image = new PictureForm(picture);
                 image.ShowDialog();
             }

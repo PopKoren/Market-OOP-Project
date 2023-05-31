@@ -13,17 +13,18 @@ namespace Bursa.Backend.Models
 
     public class Bitcoin : Crypto
     {
+        public override Image GetPicture()
+        {
+            return Bursa.Properties.Resources.bitcoin;
+
+
+        }
+
         public Bitcoin(int quantity)
              : base("Bitcoin", quantity, MainForm.btcprice, true, false)
         {
 
         }
-        public override Image GetPicture()
-        {
-
-            return Image.FromFile("C:\\Users\\lab102\\Desktop\\OOP-Project-main\\Bursa\\Bursa\\Resources\\bitcoin.png");
-
-
-        }
+       
     }
 }
